@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" th:href="@{/fonts/fontawesome-free-5.15.1-web/css/all.css}">
+    <link rel="stylesheet" th:href="@{/css/base.css}">
+    <link rel="stylesheet" th:href="@{/css/header-nav.css}">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <link rel="stylesheet" th:href="@{/css/auth_cart.css}">
+</head>
+
+<body>
+    <section class="page">
+        <header class="header">
+            <section class="grid">
+                <section class="header-wrap">
+                    <!-- Logo -->
+                    <section class="header__logo">
+                        <a href="/" class="logo-link">Logo</a>
+                    </section>
+
+                    <!-- Search bar -->
+                    <section class="header__search">
+                        <section class="search-wrap">
+                            <input type="text" class="search-input"  id="searchProduct" placeholder="Tìm kiếm sản phẩm">
+                            <button class="search-btn" id="search-button">
+                                <i class="search-btn-icon fas fa-search"></i>
+                            </button>
+                        </section>
+                    </section>
+        
+                    <!-- Cart -->
+                    <section class="header__cart">
+                        <section class="cart-wrap menu-item-active">
+                            <a href="/cart" class="cart-link">
+                                <i class="cart-icon fas fa-shopping-cart"></i>
+                                <small class="cart-notice">0</small>
+                            </a>
+                        </section>
+                    </section>
+                    <label for="menu-checkbox" class="show-menu-btn">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </label>
+                </section>
+            </section>
+        </header>
+        <nav class="navbar">
+            <input type="checkbox" name="" id="menu-checkbox">
+            <ul class="navbar__menu">
+                <li class="menu-item">
+                    <a href="/" class="menu-item-link">Trang chủ</a>
+                </li>
+                <li class="menu-item item-drop">
+                    <a href="#" class="menu-item-link">Sản phẩm</a>
+                    <ul class="menu-drop">
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="/contact" class="menu-item-link">Liên hệ</a>
+                </li>
+                <li class="menu-item" id="btnProfile">
+                    <a href="#" class="menu-item-link">Giới thiệu</a>
+                </li>
+                <li class="menu-item" id="btnDangnhap">
+                    <a href="/login" class="menu-item-link">Đăng nhập</a>
+                </li>
+                <li class="menu-item" id="btnLogout" onclick="logout()" style="display: none;">
+                    <a href="/" class="menu-item-link">Đăng xuất</a>
+                </li>
+                <label for="menu-checkbox" class="hide-menu-btn">
+                    <i class="fas fa-times"></i>
+                </label>
+            </ul>
+        </nav>
+        <section class="cart-product">
+            <div class="row">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                    <div class="content-product">
+                        <!--Xuất dữ liệu vào trong đây-->
+                    </div>
+
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="background-color: rgb(239, 239, 239);">
+                    <div class="row" style="margin-right: 55px; height: 30px;">
+                        <div class="col-xl-6 col-lg-6 col-md-6" style="padding-left: 15px;">
+                            Tạm tính
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6" id="totalprice">0 đ</div>
+                    </div>
+                    <hr>
+                    <div class="row" style="margin-right: 55px;    height: 30px;">
+                        <div class="col-xl-6 col-lg-6 col-md-6" style="padding-left: 15px;">
+                            Thành tiền
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6" id="total">0 đ</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="content-body">
+
+    </section>
+
+    <footer class="footer">
+        <section class="grid">
+            <section class="footer-wrap">
+                <h3>© 2020 Tập đoàn Logo - Logo Group</h3>
+                <p>Địa chỉ: Hoàng Liệt - Hoàng Mai - Hà Nội</p>
+                <p>Điện thoại: 0986xxxxxx</p>
+                <p>Email: thudientu@logo.com.vn</p>
+            </section>
+        </section>
+    </footer>
+    </section>
+    <script th:src="@{/js/cart.js}" type="module"></script>
+    <script th:src="@{/js/index_loadcart.js}" type="module"></script>
+    <script th:src="@{/js/search.js}" type="module"></script>
+    <script th:src="@{/js/hang.js}" type="module"></script>
+</body>
+
+</html>
